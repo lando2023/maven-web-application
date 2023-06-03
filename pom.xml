@@ -33,6 +33,7 @@
             <dependency>
                 <groupId>org.json</groupId>
                 <artifactId>json</artifactId>
+                <version>20230227</version>
             </dependency>
       
             <dependency>
@@ -51,8 +52,8 @@
       
             <dependency>
                 <groupId>org.mockito</groupId>
-                <artifactId>org.mockito-core</artifactId>
-                <version>1.9.5</version>
+                <artifactId>mockito-core</artifactId>
+                <version>5.3.1</version>
                 <scope>test</scope>
             </dependency>
       
@@ -63,39 +64,23 @@
                 <artifactId>spring-core</artifactId>
                 <version>${spring.version}</version>
             </dependency>
-            <dependency>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-core</artifactId>
-                    <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-core</artifactId>
-                    <version>${spring.version}</version>
-            </dependency>
     
             <!-- provided dependencies -->
-      
-            <dependency>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>javax.servlet-api</artifactId>
-                    <version>3.1.0</version>
-            </dependency>
-        
-            </dependencies>
+           
+    </dependencies>
             
             <distributionManagement>
                 <repository>
                     <id>nexus</id>
                     <name>LandO2023 Technologies Releases Nexus Repository</name>
                     <url>http://52.53.227.31:8191/LandO2023/repository/tesla-fe-releases/</url>
-                <repository>
+                </repository>
                     
                 <snapshotRepository>
                     <id>nexus</id>
                     <name>LandO2023 Technologies Releases Nexus Repository</name>
                     <url>http://52.53.227.31:8191/LandO2023/repository/tesla-fe-snapshots/</url>
-                <snapshotRepository>
+                </snapshotRepository>
             </distributionManagement>
                     
             <build>
@@ -108,6 +93,7 @@
                                <configuration>
                                        <source>${jdk.version}</source>
                                        <target>${jdk.version}</target>
+                               </configuration>
                         </plugin>
                             
                         <plugin>
@@ -131,9 +117,10 @@
                                       <downloadJavadocs>true</downloadJavadocs>
                                       <wtpversion>2.0</wtpversion>
                                       <wtpContextName>maven-web-application</wtpContextName>
+                               </configuration>
                         </plugin>
  </plugins>
-        <build>
+            </build>
  </project>
   
   
